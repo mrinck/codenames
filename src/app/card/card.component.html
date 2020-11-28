@@ -1,0 +1,13 @@
+<div class="inner">
+    <div class="front">
+        <div class="front-inner">
+            <div class="hanger"></div>
+            <img class="image" src="assets/silhouette.png">
+            <span class="label">{{ codename.toUpperCase() }}</span>
+        </div>
+    </div>
+
+    <div class="back">
+        <div *ngIf="identity" class="identity" [ngClass]="[identity.type, identity.gender || '']"></div>
+    </div>
+</div>

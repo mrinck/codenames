@@ -1,0 +1,6 @@
+<div class="grid-container">
+    <div *ngFor="let identity of identities" class="cell" [ngClass]="identity.type">
+        <mat-icon *ngIf="identity.type == 'assassin'">close</mat-icon>
+        <mat-icon  *ngIf="identity.type == 'red' || identity.type == 'blue'">radio_button_unchecked</mat-icon>
+    </div>
+</div>

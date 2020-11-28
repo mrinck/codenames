@@ -1,0 +1,153 @@
+{
+    "cards": [
+      {
+        "word": "Riegel",
+        "type": "blue",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Akt",
+        "type": "red",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Spiel",
+        "type": "blue",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Wanze",
+        "type": "red",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Gnade",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Wolkenkratzer",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Computer",
+        "type": "assassin",
+        "revealed": false
+      },
+      {
+        "word": "Test1",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test2",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test3",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test4",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test5",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test6",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test7",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test8",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test9",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test10",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test11",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test12",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test13",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test14",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test15",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test16",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      },
+      {
+        "word": "Test17",
+        "type": "bystander",
+        "gender": "female",
+        "revealed": false
+      },
+      {
+        "word": "Test18",
+        "type": "bystander",
+        "gender": "male",
+        "revealed": false
+      }
+    ]
+  }

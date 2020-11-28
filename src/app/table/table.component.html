@@ -1,0 +1,7 @@
+<ng-container *ngIf="game">
+    <div class="grid-container">
+        <app-card *ngFor="let card of game.cards" [codename]="card.codename" [identity]="card.identity"
+            (click)="identify(card.codename)">
+        </app-card>
+    </div>
+</ng-container>
