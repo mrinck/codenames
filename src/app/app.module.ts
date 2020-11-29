@@ -13,8 +13,12 @@ import { SpymasterComponent } from './spymaster/spymaster.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { environment } from '../environments/environment';
 
-const config: SocketIoConfig = { url: 'http://codenames.michelrinck.de/ws', options: {}};
+const config: SocketIoConfig = {
+  url: environment.websocketEndpoint,
+  options: {}
+};
 
 @NgModule({
   declarations: [

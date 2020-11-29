@@ -4,8 +4,9 @@ import { Socket } from 'ngx-socket-io';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Game, Identity } from './types';
+import { environment} from '../../environments/environment';
 
-const HOST = 'codenames.michelrinck.de/api';
+const HOST = environment.apiEndpoint;
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +24,15 @@ export class GameService {
   }
 
   createGame(): Observable<string> {
-    return this.httpClient.post<{ gameId: string }>('http://' + HOST + '/game/create', {}).pipe(map(response => response.gameId));
+    return this.httpClient.post<{ gameId: string }>(HOST + '/create', {}).pipe(map(response => response.gameId));
   }
 
   getGame(gameId: string): Observable<Game> {
-    return this.httpClient.get<Game>('http://' + HOST + '/game/' + gameId);
+    return this.httpClient.get<Game>(HOST + '/' + gameId);
   }
 
   getIdentities(gameId: string): Observable<Identity[]> {
-    return this.httpClient.get<Identity[]>('http://' + HOST + '/game/' + gameId + '/identities');
+    return this.httpClient.get<Identity[]>(HOST + '/' + gameId + '/identities');
   }
 
   register(gameId: string) {
