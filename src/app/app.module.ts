@@ -14,7 +14,7 @@ import { SpymasterComponent } from './spymaster/spymaster.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-const config: SocketIoConfig = { url: 'http://localhost:8080', options: {}};
+const config: SocketIoConfig = { url: 'http://codenames.michelrinck.de/ws', options: {}};
 
 @NgModule({
   declarations: [
