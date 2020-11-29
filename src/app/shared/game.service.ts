@@ -5,7 +5,7 @@ import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Game, Identity } from './types';
 
-const HOST = '192.168.178.47';
+const HOST = 'codenames.michelrinck.de/api';
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +23,15 @@ export class GameService {
   }
 
   createGame(): Observable<string> {
-    return this.httpClient.post<{ gameId: string }>('http://' + HOST + ':3000/game/create', {}).pipe(map(response => response.gameId));
+    return this.httpClient.post<{ gameId: string }>('http://' + HOST + '/game/create', {}).pipe(map(response => response.gameId));
   }
 
   getGame(gameId: string): Observable<Game> {
-    return this.httpClient.get<Game>('http://' + HOST + ':3000/game/' + gameId);
+    return this.httpClient.get<Game>('http://' + HOST + '/game/' + gameId);
   }
 
   getIdentities(gameId: string): Observable<Identity[]> {
-    return this.httpClient.get<Identity[]>('http://' + HOST + ':3000/game/' + gameId + '/identities');
+    return this.httpClient.get<Identity[]>('http://' + HOST + '/game/' + gameId + '/identities');
   }
 
   register(gameId: string) {
