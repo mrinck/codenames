@@ -4,6 +4,6 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: '0.0.0.0:3000',
-  websocketEndpoint: '0.0.0.0:3000'
+  apiEndpoint: 'http://localhost:8088',
+  websocketEndpoint: 'ws://localhost:8089'
 };
