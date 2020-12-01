@@ -58,11 +58,21 @@
     hyphens: auto;
     word-break: break-all;
     display: flex;
+}
 
+.image {
+    position: absolute;
+    top: .3em;
+    right: .3em;
+    bottom: 2.1em;
+    width: 33%;
+
+    background-color: #fff;
     background-image: url("/assets/silhouette.png");
     background-size: contain;
-    background-position: right bottom;
+    background-position: bottom center;
     background-repeat: no-repeat;
+    opacity: .3;
 }
 
 .hanger {
