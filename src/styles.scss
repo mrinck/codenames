@@ -1,4 +1,7 @@
-html, body {
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+html,
+body {
     height: 100%;
 }
 
@@ -7,4 +10,11 @@ body {
     background-repeat: repeat;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.confirm-identity-dialog {
+    .mat-dialog-container {
+        background: #333;
+        color: #fff;
+    }
 }

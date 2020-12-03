@@ -14,6 +14,8 @@ import { SpymasterComponent } from './spymaster/spymaster.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { environment } from '../environments/environment';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmIdentifyDialog } from './table/confirm-identify/confirm-identify-dialog.component';
 
 const config: SocketIoConfig = {
   url: environment.websocketEndpoint,
@@ -24,6 +26,7 @@ const config: SocketIoConfig = {
   declarations: [
     AppComponent,
     TableComponent,
+    ConfirmIdentifyDialog,
     CardComponent,
     StartComponent,
     SpymasterComponent
@@ -35,7 +38,8 @@ const config: SocketIoConfig = {
     SocketIoModule.forRoot(config),
     BrowserAnimationsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

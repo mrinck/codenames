@@ -4,6 +4,8 @@ import { CardComponent } from '../card/card.component';
 import { GameService } from '../shared/game.service';
 import { Game } from '../shared/types';
 import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmIdentifyDialog } from './confirm-identify/confirm-identify-dialog.component';
 
 @Component({
   selector: 'app-table',
@@ -20,7 +22,8 @@ export class TableComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private gameService: GameService,
-    private cd: ChangeDetectorRef
+    private cd: ChangeDetectorRef,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -49,7 +52,15 @@ export class TableComponent implements OnInit {
   identify(codename: string) {
     const card = this.cards.find(c => c.codename === codename);
     if (!card.identity) {
-      this.gameService.identify(this.game.id, codename);
+      const dialogRef = this.dialog.open(ConfirmIdentifyDialog, {
+        panelClass: 'confirm-identity-dialog',
+        data: { codename, card }
+      });
+      dialogRef.afterClosed().subscribe(confirmed => {
+        if (confirmed) {
+          this.gameService.identify(this.game.id, codename);
+        }
+      });
     }
   }
 
@@ -65,5 +76,13 @@ export class TableComponent implements OnInit {
 
   onGameInit(game: Game) {
     console.log('game initialized');
+  }
+
+  getCardsLeft(color: 'red' | 'blue'): number {
+    const identified = this.cards
+      .filter(card => card.identity != null)
+      .filter(card => card.identity.type === color)
+      .length
+    return 9 - identified;
   }
 }

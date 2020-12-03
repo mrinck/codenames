@@ -24,6 +24,10 @@
     transform: rotateY(180deg);
 }
 
+:host:not(.flipped) {
+    cursor: pointer;
+}
+
 .front,
 .back {
     border-radius: .6em;
